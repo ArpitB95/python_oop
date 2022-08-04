@@ -92,3 +92,47 @@ print(snake_object.seek_heat()) # this function is inherited from Reptile class
 print(snake_object.use_tongue_to_smell()) # this function is inherited from Snake class
 ````
 
+## Step-3- Capsulation
+
+# Inherit reptile from Reptile class
+
+````
+from reptile import Reptile
+
+class Snake(Reptile):
+
+    def __init__(self):
+        super().__init__()
+
+        self.forked_tongue = True
+        self.danger = True
+        self._canfly = False
+        self.__speedy = True
+
+
+
+    #def use_tongue_to_smell(self):
+      #  return "It can use tongue to smell food"
+
+    def _hiss(self):
+        return "hissss"
+
+    #def __speaks(self):
+     #   return "no"
+
+
+        # pass # if you don't need to print statement or you don't have to pass message
+
+
+snake_object = Snake()
+
+
+
+# print(snake_object.eat()) # this function is inherited from animal
+# print(snake_object.seek_heat()) # this function is inherited from Reptile class
+# print(snake_object.use_tongue_to_smell()) # this function is inherited from Snake class
+# print(snake_object.danger)
+print(snake_object._canfly)
+print(snake_object._hiss())
+
+````
