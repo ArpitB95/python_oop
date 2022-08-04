@@ -1,11 +1,23 @@
 # Python oop
 
+<img width="422" alt="Animal_example" src="https://user-images.githubusercontent.com/110182832/182913131-c81d46ef-2b80-4755-a119-9a9dea6010ee.png">
+
+
+## Steps to follow:
+- Create a new project on pycharm
+- Create new github repo called python_oop
+- Create a README.md in pycharm
+- Create a file called animal.py (if this works do abstraction)
+- Create a file called reptile.py and inherit Animal (key words used - super class, init)
+- Create a file called snake.py and inherit reptile ( do encapsulation)
+- Create a file called python.py and inherit snake (do polymorphism)
+
 
 ### step 1
 
 ````
-# create an animal class
-# syntax is class name:
+### create an animal class
+### syntax is class name:
 
 class Animal:
 
@@ -21,22 +33,22 @@ class Animal:
     def eat(self):
         return "eat if you like to stay alive.. eat healthy"
 
-# create an object of the class before using it
+### create an object of the class before using it
 cat= Animal()
 
-print(cat.eat())   # call method from the class, abstracted how                     was eat created or what info is available
+print(cat.eat())   ### call method from the class, abstracted how    was eat created or what info is available
 
-#print(cat.alive)
+print(cat.alive)
 
 ````
 
 
 ### Step 2- Inheritance
 
-# Inherit everything from Animal class into reptile file
+### Inherit everything from Animal class into reptile file
 from animal import Animal
 
-# create a reptile class
+### create a reptile class
 
 ````
 class Reptile(Animal):  # write the name of the class in (parent-class) to inherit
@@ -56,18 +68,18 @@ class Reptile(Animal):  # write the name of the class in (parent-class) to inher
     def hunt(self):
         return "working hard to catch a next meal"
 
-# create an object of reptile class
+### create an object of reptile class
 
 reptile_object = Reptile()
 
-#print(reptile_object.eat())
-#print(reptile_object.hunt())
+print(reptile_object.eat())
+print(reptile_object.hunt())
 ````
 
 
 ## Step-3 
 
-# Inherit reptile from Reptile class
+### Inherit reptile from Reptile class
 
 
 ````
@@ -94,7 +106,7 @@ print(snake_object.use_tongue_to_smell()) # this function is inherited from Snak
 
 ## Step-3- Capsulation
 
-# Inherit reptile from Reptile class
+### Inherit reptile from Reptile class
 
 ````
 from reptile import Reptile
@@ -111,17 +123,17 @@ class Snake(Reptile):
 
 
 
-    #def use_tongue_to_smell(self):
-      #  return "It can use tongue to smell food"
+    def use_tongue_to_smell(self):
+        return "It can use tongue to smell food"
 
     def _hiss(self):
         return "hissss"
 
-    #def __speaks(self):
-     #   return "no"
+    def __speaks(self):
+        return "no"
 
 
-        # pass # if you don't need to print statement or you don't have to pass message
+        ### pass- if you don't need to print statement or you don't have to pass message
 
 
 snake_object = Snake()
@@ -131,7 +143,7 @@ snake_object = Snake()
 # print(snake_object.eat()) # this function is inherited from animal
 # print(snake_object.seek_heat()) # this function is inherited from Reptile class
 # print(snake_object.use_tongue_to_smell()) # this function is inherited from Snake class
-# print(snake_object.danger)
+print(snake_object.danger)
 print(snake_object._canfly)
 print(snake_object._hiss())
 
